@@ -1,7 +1,7 @@
 <head>
 <meta name="viewport" content="width=device-width,
 initial-scale=1">
-<title>Data Mahasiswa</title>
+<title>Data Buku</title>
     <style>
         table {
         border-collapse: collapse;
@@ -25,7 +25,6 @@ initial-scale=1">
 </head>
 <body>
     <div style="overflow-x: auto;">
-        <a .class="tambah" href="{{route('ms_buku')}}">Tambah Data</a>
         <table>
             <thead>
                 <tr>
@@ -40,16 +39,16 @@ initial-scale=1">
             </thead>    
             <tbody>
                 <?php $no=1; ?>
-                @foreach ($ms_buku as $buku)
+                @foreach ($ms_buku as $b)
                 <tr>
                     <td>{{$no++}}</td>
-                    <td>{{$buku->kode_buku}}</td>
-                    <td>{{$buku->kode_kategori}}</td>
-                    <td>{{$buku->kode_penerbit}}</td>
-                    <td>{{$buku->judul_buku}}</td>
-                    <td>{{$buku->jumlah_buku}}</td>
-                    <td>{{$buku->pengarang_buku}}</td>
-                    <td>{{$buku->tahun_terbit_buku}}</td>
+                    <td>{{$b->kode_buku}}</td>
+                    <td>{{$b->kode_kategori}}</td>
+                    <td>{{$b->kode_penerbit}}</td>
+                    <td>{{$b->judul_buku}}</td>
+                    <td>{{$b->jumlah_buku}}</td>
+                    <td>{{$b->pengarang_buku}}</td>
+                    <td>{{$b->tahun_terbit_buku}}</td>
                 </tr>
                 @endforeach
             </tbody>
